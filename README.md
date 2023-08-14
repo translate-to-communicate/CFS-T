@@ -10,7 +10,7 @@ JSON function designed to support JSON requests <br>
 1. Download the ZIP and extract to your desired location. Keep all files together.
 2. Ensure python is installed (minimum version requirement is 3.9.0)
 3. Install the required packages using the setup.py file or pip: (Required packages are listed at the end of this document)
-   - python setup.py install
+   - From within the CFS-T-main folder: python setup.py install
    - python -m pip install "replace with required package" (do not include quotations)
 4. If using local files, ensure they are in the correct file format (see above for supported formats). The system will run regardless, however any file formats not supported will be ignored. A message will appear, once the program is done, that shows which documents were not processed.
 5. If using the Socrata Open Data API or any JSON requests you must modify CFS-T.py:
@@ -26,7 +26,7 @@ JSON function designed to support JSON requests <br>
 ## How To Run
 1. Run CFS-T.py through a command terminal, powershell window, or command prompt
    - From the inside the CFS directory - "python CFS-T.py"
-   - From anywhere else, you must specify the full directory. Example - python "C:\Users\johndoe\Desktop\CFS-T-main\CFS-T.py"
+   - From anywhere else, you must specify the full directory. Example - python "C:\Users\johndoe\Desktop\CFS-T-main\CFS-T-main\CFS\CFS-T.py"
 2. A window will appear with 4 buttons and a checkbox
    - Option 1 - "**Run CFS**". This will run the program with local files. 
      - The checkbox is to select whether you want to run the system with or without API/JSON connections.
