@@ -11,8 +11,8 @@ setup(
     version="0.0.9",
     description="An automated script to pull in calls-for-service (CFS) data and produce a "
                 "single document meant for archiving and future analysis",
-    package_dir={"": "app"},
-    packages=find_packages(where="app"),
+    package_dir={"": "CFS"},
+    packages=find_packages(where="CFS"),
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Christopher Romeo",
