@@ -1,6 +1,6 @@
-# Calls for Service (CFS) Translation
+# Calls for Service - Translator (CFS-T)
 
-The Calls for Service (CFS) Translation program is a python script that is aimed at providing a service to extract data from various police agencies through direct connections of their data repositories and/or through locally stored files. The program translates the data, with respect to a data standard designed for this program, and then loads it into a final archive document (.csv) in the directory chosen by the user.
+The Calls for Service - Translator (CFS-T) program is a python script that is aimed at providing a service to extract data from various police agencies through direct connections of their data repositories and/or through locally stored files. The program translates the data, with respect to a data standard designed for this program, and then loads it into a final archive document (.csv) in the directory chosen by the user.
 
 Currently supported local file formats: Excel 2010 files (i.e., .xlsx), .xls, and .csv <br>
 API connections: Socrata Open Data API (1000 request limit per hour due to SODA Consumer API policy. See Step 5 of "Before You Begin" for more)<br>
@@ -13,7 +13,7 @@ JSON function designed to support JSON requests <br>
    - python setup.py install
    - python -m pip install "replace with required package" (do not include quotations)
 4. If using local files, ensure they are in the correct file format (see above for supported formats). The system will run regardless, however any file formats not supported will be ignored. A message will appear, once the program is done, that shows which documents were not processed.
-5. If using the Socrata Open Data API or any JSON requests you must modify CFS.py:
+5. If using the Socrata Open Data API or any JSON requests you must modify CFS-T.py:
    - Lines 38-40: enter the username, password, and apptoken inside the quotation marks (Socrata)
    - Add any additional agency connections. Copy the code snippet below or follow the examples starting on line 44 for all Socrata connections. Replace the first three variables (Agency Name, URL, and Client-Code) for the specific agency. Do not remove the quotation marks. 
      - api_li, api_liz = socrata_api("Agency Name", "URL", "Client-Code", myapptoken, usrname,
@@ -24,9 +24,9 @@ JSON function designed to support JSON requests <br>
 7. Update "Dictionary.txt" if city abbreviations are used. Follow the example cities given inside Dictionary.txt.
 
 ## How To Run
-1. Run CFS.py through a command terminal, powershell window, or command prompt
-   - From the inside the CFS directory - "python CFS.py"
-   - From anywhere else, you must specify the full directory. Example - python "C:\Users\johndoe\Desktop\CFS\CFS\CFS.py"
+1. Run CFS-T.py through a command terminal, powershell window, or command prompt
+   - From the inside the CFS directory - "python CFS-T.py"
+   - From anywhere else, you must specify the full directory. Example - python "C:\Users\johndoe\Desktop\CFS\CFS-T.py"
 2. A window will appear with 4 buttons and a checkbox
    - Option 1 - "**Run CFS**". This will run the program with local files. 
      - The checkbox is to select whether you want to run the system with or without API/JSON connections.

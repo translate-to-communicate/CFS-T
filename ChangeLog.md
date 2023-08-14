@@ -190,4 +190,7 @@ v1.0.2
 
 v1.0.3
 - Removed unnecessary comments and print statements
-- 
+
+v1.0.4
+- Updated the python script file name to CFS-T.py
+- Updated the README to reflect the change
