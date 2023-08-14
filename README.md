@@ -14,12 +14,12 @@ JSON function designed to support JSON requests <br>
    - python -m pip install "replace with required package" (do not include quotations)
 4. If using local files, ensure they are in the correct file format (see above for supported formats). The system will run regardless, however any file formats not supported will be ignored. A message will appear, once the program is done, that shows which documents were not processed.
 5. If using the Socrata Open Data API or any JSON requests you must modify CFS-T.py:
-   - Lines 38-40: enter the username, password, and apptoken inside the quotation marks (Socrata)
+   - Lines 37-39: enter the username, password, and apptoken inside the quotation marks (Socrata)
    - Add any additional agency connections. Copy the code snippet below or follow the examples starting on line 44 for all Socrata connections. Replace the first three variables (Agency Name, URL, and Client-Code) for the specific agency. Do not remove the quotation marks. 
      - api_li, api_liz = socrata_api("Agency Name", "URL", "Client-Code", myapptoken, usrname,
                                   psword, opath, api_agency_ref, api_li, api_liz)
      - JSON requests require the user to enter the URL as defined by the agencies data repository. An example is provided on line 72.
-   - Line 99: Update the snippet "limit=1000" to change the limit of records to be pulled from the data repository based on your requirements. ***Note that SODA Consumer API has a max request limit of 1000 per hour with an app token. To gain more requests you will need to contact the SODA support team at: https://support.socrata.com/hc/en-us/requests/new***  
+   - Line 98: Update the snippet "limit=1000" to change the limit of records to be pulled from the data repository based on your requirements. ***Note that SODA Consumer API has a max request limit of 1000 per hour with an app token. To gain more requests you will need to contact the SODA support team at: https://support.socrata.com/hc/en-us/requests/new***  
 6. Update "Agency Reference.xlsx" with the agency column headers (follow the example agencies provided). ***Case Sensitive***
 7. Update "Dictionary.txt" if city abbreviations are used. Follow the example cities given inside Dictionary.txt.
 
