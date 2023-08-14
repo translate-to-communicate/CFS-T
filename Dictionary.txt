@@ -1,4 +1,0 @@
-# City dictionary as needed for city abbreviations.
-Virginia Beach:VAB
-Las Vegas:LV
-Carson City:CC
