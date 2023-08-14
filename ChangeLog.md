@@ -187,3 +187,7 @@ v1.0.1
 v1.0.2
 - Updated the request limit for the SODA API to 1000. Max is 1000 per hour per the SODA API, requests for more need to go through the SODA support team.
 - Updated the README to highlight the above change.
+
+v1.0.3
+- Removed unnecessary comments and print statements
+- 

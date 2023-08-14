@@ -296,7 +296,7 @@ def final_message(df, failed_agencies):
     exit_button.pack(side="bottom")
     screen.pack(side="top")
 
-    screen.insert(tk.END, tabulate(final_df.head(5), headers='keys', tablefmt='psql'))
+    screen.insert(tk.END, tabulate(final_df.head(15), headers='keys', tablefmt='psql'))
     screen.insert(tk.END, "\n")
     screen.insert(tk.END, f"The following files were not processed: {failed}")
 
@@ -354,11 +354,8 @@ def calls_for_service(api_option, local_option):
             head, sep, tail = agency_file_name.partition('_')
             file_dct[agency_file_name] = head
 
-        print(file_dct)
-
         for f in csv_files_csv:
             # Get the filename
-            print(f)
             agency = os.path.basename(f)
             print(f"Now processing: {agency}")
             agency_found = False
@@ -427,8 +424,8 @@ def calls_for_service(api_option, local_option):
 
                 # Send to LocationProcessing
                 temp_df = location_coding(temp_df)
-                print("After Location:")
-                print(temp_df.head(5))
+                # print("After Location:")
+                # print(tabulate(temp_df.head(5)))
 
                 # Now we save the modified agency file to its own separate file
                 testing_df.to_csv(f"{opath}/02_Agency_Specific_{agency}.csv", index=False)
@@ -463,8 +460,8 @@ def calls_for_service(api_option, local_option):
 
                 # Send to location service testing
                 temp_df = location_coding(temp_df)
-                print("After Location:")
-                print(temp_df.head(5))
+                # print("After Location:")
+                # print(tabulate(temp_df.head(5)))
 
                 # Save the modified agency file
                 testing_df.to_csv(f"{opath}/02_Agency_Specific_{agency}.csv", index=False)
@@ -497,8 +494,8 @@ def calls_for_service(api_option, local_option):
 
                 # Send to LocationProcessing
                 temp_df = location_coding(temp_df)
-                print("After Location:")
-                print(temp_df.head(5))
+                # print("After Location:")
+                # print(tabulate(temp_df.head(5)))
 
                 # Now we save the modified agency file to its own separate file
                 temp_df.to_csv(f"{opath}/02_Agency_Specific_{agency}.csv", index=False)
@@ -533,19 +530,14 @@ def calls_for_service(api_option, local_option):
 
         if 'merged address' in df2.columns:
             df2 = df2[['auid', 'agency', 'incident number', 'call date/time', 'dispatch date/time', 'call type',
-                       'location (lat/long)', 'type of location', 'location code', 'merged address']]
+                       'merged address', 'location (lat/long)', 'type of location', 'location code']]
         else:
             df2 = df2[['auid', 'agency', 'incident number', 'call date/time', 'dispatch date/time', 'call type',
                        'location (lat/long)', 'type of location', 'location code']]
         df2.to_csv(f"{opath}/00_Final_Archival.csv")
         print('')
-        print('The merged document contains the following columns:')
-        for (columnName) in df2.columns:  # columnName inside a for loop works just as well.
-            print(columnName)
-        print('')
-        print('')
-        print('The following is the first 5 rows from the combined data:')
-        print(tabulate(df2.head(5), headers='keys', tablefmt='psql'))
+        print('The following is the first 15 rows from the combined data:')
+        print(tabulate(df2.head(15), headers='keys', tablefmt='psql'))
         print("The following files were not processed:")
         print(failed_agencies)
         # Send all unique call types to a separate file
@@ -707,10 +699,9 @@ def location_coding(df):
         working_df.drop('state cfs', axis=1, inplace=True)
     if 'city cfs' in working_df.columns:
         working_df.drop('city cfs', axis=1, inplace=True)
-    # Comment out the below code if you want to see the combined address to validate the merged information.
-    # The column will appear as the last column in the final data set.
-    if 'merged address' in working_df.columns:
-        working_df.drop('merged address', axis=1, inplace=True)
+    # Remove the comment from the below code if you want to see remove the combined address column.
+    # if 'merged address' in working_df.columns:
+    #     working_df.drop('merged address', axis=1, inplace=True)
 
     return working_df
 

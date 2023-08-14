@@ -19,7 +19,7 @@ JSON function designed to support JSON requests <br>
      - api_li, api_liz = socrata_api("Agency Name", "URL", "Client-Code", myapptoken, usrname,
                                   psword, opath, api_agency_ref, api_li, api_liz)
      - JSON requests require the user to enter the URL as defined by the agencies data repository. An example is provided on line 72.
-   - Line 99: Update the snippet "limit=1000" to change the limit of records to be pulled from the data repository. ***Note that SODA Consumer API has a max request limit of 1000 per hour with an app token. To gain more requests you will need to contact the SODA support team at: https://support.socrata.com/hc/en-us/requests/new***  
+   - Line 99: Update the snippet "limit=1000" to change the limit of records to be pulled from the data repository based on your requirements. ***Note that SODA Consumer API has a max request limit of 1000 per hour with an app token. To gain more requests you will need to contact the SODA support team at: https://support.socrata.com/hc/en-us/requests/new***  
 6. Update "Agency Reference.xlsx" with the agency column headers (follow the example agencies provided). ***Case Sensitive***
 7. Update "Dictionary.txt" if city abbreviations are used. Follow the example cities given inside Dictionary.txt.
 
