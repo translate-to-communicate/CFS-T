@@ -26,7 +26,7 @@ JSON function designed to support JSON requests <br>
 ## How To Run
 1. Run CFS-T.py through a command terminal, powershell window, or command prompt
    - From the inside the CFS directory - "python CFS-T.py"
-   - From anywhere else, you must specify the full directory. Example - python "C:\Users\johndoe\Desktop\CFS\CFS-T.py"
+   - From anywhere else, you must specify the full directory. Example - python "C:\Users\johndoe\Desktop\CFS-T-main\CFS-T.py"
 2. A window will appear with 4 buttons and a checkbox
    - Option 1 - "**Run CFS**". This will run the program with local files. 
      - The checkbox is to select whether you want to run the system with or without API/JSON connections.
