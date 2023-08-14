@@ -1,4 +1,3 @@
-# Updated 30JUL2023 08:10
 # Author: Christopher Romeo
 # XML files have not been tested
 import tkinter as tk
