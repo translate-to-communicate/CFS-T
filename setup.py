@@ -7,8 +7,8 @@ with open("README.md", "r", encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name="CFS-Translation",
-    version="0.0.9",
+    name="CFS-Translator",
+    version="1.0.5",
     description="An automated script to pull in calls-for-service (CFS) data and produce a "
                 "single document meant for archiving and future analysis",
     package_dir={"": "CFS"},
