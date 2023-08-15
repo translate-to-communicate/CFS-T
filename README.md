@@ -15,7 +15,7 @@ JSON function designed to support JSON requests <br>
 4. If using local files, ensure they are in the correct file format (see above for supported formats). The system will run regardless, however any file formats not supported will be ignored. A message will appear, once the program is done, that shows which documents were not processed.
 5. If using the Socrata Open Data API or any JSON requests you must modify CFS-T.py:
    - Lines 37-39: enter the username, password, and apptoken inside the quotation marks (Socrata)
-   - Add any additional agency connections. Copy the code snippet below or follow the examples starting on line 44 for all Socrata connections. Replace the first three variables (Agency Name, URL, and Client-Code) for the specific agency. Do not remove the quotation marks. 
+   - Add any additional agency connections. Copy the code snippet below or follow the examples starting on line 43 for all Socrata connections. Replace the first three variables (Agency Name, URL, and Client-Code) for the specific agency. Do not remove the quotation marks. 
      - api_li, api_liz = socrata_api("Agency Name", "URL", "Client-Code", myapptoken, usrname,
                                   psword, opath, api_agency_ref, api_li, api_liz)
      - JSON requests require the user to enter the URL as defined by the agencies data repository. An example is provided on line 72.
